@@ -877,5 +877,62 @@
     "role": {
       "id": "${administratorsRole}"
     }
+  },
+  {
+    "id": "${statics["java.util.UUID"].randomUUID()}",
+    "securable": {
+      "id": "${publicSecurable}"
+    },
+    "pattern": "/mobileapp/cordova.js",
+    "getMethodAllowed": true,
+    "headMethodAllowed": true,
+    "putMethodAllowed": true,
+    "postMethodAllowed": true,
+    "patchMethodAllowed": true,
+    "deleteMethodAllowed": true,
+    "optionsMethodAllowed": true,
+    "traceMethodAllowed": true,
+    "application": {
+      "id": "${appguid}"
+    },
+    "_class": "app.entity.View"
+  },
+  {
+    "id": "${statics["java.util.UUID"].randomUUID()}",
+    "securable": {
+      "id": "${publicSecurable}"
+    },
+    "pattern": "/mobileapp/cordova_plugins.js",
+    "getMethodAllowed": true,
+    "headMethodAllowed": true,
+    "putMethodAllowed": true,
+    "postMethodAllowed": true,
+    "patchMethodAllowed": true,
+    "deleteMethodAllowed": true,
+    "optionsMethodAllowed": true,
+    "traceMethodAllowed": true,
+    "application": {
+      "id": "${appguid}"
+    },
+    "_class": "app.entity.View"
+  },
+  {
+    "id": "${statics["java.util.UUID"].randomUUID()}",
+    "securable": {
+      "id": "${publicSecurable}"
+    },
+    "pattern": "/mobileapp/js/hostApp.js",
+    "getMethodAllowed": true,
+    "headMethodAllowed": true,
+    "putMethodAllowed": true,
+    "postMethodAllowed": true,
+    "patchMethodAllowed": true,
+    "deleteMethodAllowed": true,
+    "optionsMethodAllowed": true,
+    "traceMethodAllowed": true,
+    "application": {
+      "id": "${appguid}"
+    },
+    "_class": "app.entity.View"
   }
 ]
