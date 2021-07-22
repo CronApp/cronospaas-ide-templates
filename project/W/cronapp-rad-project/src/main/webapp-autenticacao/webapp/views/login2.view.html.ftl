@@ -19,12 +19,11 @@
 
                             <h1 class="title component-holder col-xs-12 col-md-12 h3 text-left"
                                 xattr-position="text-left" xattr-type="h3" data-component="crn-text-component"
-                                id="crn-text-component-login">Acesse</h1>
+                                id="crn-text-component-login">{{'Signup.view.Acess' | translate}}</h1>
 
                             <div class="login-signup">
                                 <p data-component="crn-simple-text" class="component-holder col-xs-12 col-md-12"
-                                    id="crn-simple-text-login">Ainda não tem uma conta? </p>
-                                <!-- Cadastro -->
+                                    id="crn-simple-text-login">{{'Signup.view.NotHaveAccount' | translate}}</p>
                                 <a href="#/public/signup"
                                     class="sign-up cron-link text-center component-holder col-md-12 col-xs-12"
                                     target="_self" data-replace="true" data-component="crn-anchor"
@@ -68,9 +67,8 @@
 
 
                     <#if (authentication?lower_case=="sso" || authentication?lower_case=="saml" ) && (enterprise)!false>
-                        <#-- verificar -->
                             <a role="button" aria-label="{{'Login.view.Login' | translate}}" href="#"
-                                class="btn btn-default cron-link col-md-12 col-xs-12 k-button btn-primary"
+                                class="btn k-button btn-login btn-block" id="crn-button-login-authentication"
                                 target="_self" data-replace="true" data-component="crn-anchor"
                                 ng-click="redirectToLogin()">
                                 <span>{{"Login.view.Login" | translate}} </span>
@@ -90,12 +88,14 @@
                     </form>
 
                     <#if mutual?? && mutual?lower_case=="sim" && (enterprise)!false>
-                        <div class="component-holder ng-binding ng-scope col-xs-12 col-md-12" style="margin-top:5px"
-                            data-component="crn-button" id="crn-button-716293">
-                            <button class="btn btn-default k-button btn-block"
-                                ng-click="cronapi.client('js.blockly.MutualAuth.login').run()"
-                                xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
-                                <span>{{'CertificateLogin' | translate}}</span>
+                        <div class="component-holder ng-scope" data-component="crn-button" style="margin-top:5px"
+                            id="crn-button-mutual">
+                            <button aria-label="{{'Login.view.Login' | translate}}"
+                                class="btn k-button btn-login-mutual btn-block" type="submit"
+                                ng-disabled="form.$invalid || vm.dataLoading"
+                                ng-click="cronapi.client('js.blockly.MutualAuth.login').run()" xattr-size=""
+                                xattr-fullsize="btn-block" xattr-theme="" xattr-disabled=""
+                                data-component="crn-button"><span>{{"CertificateLogin" | translate}} </span>
                             </button>
                         </div>
                     </#if>
@@ -173,29 +173,23 @@
             </div>
         </div>
     </div>
-</div>
 
-<div id="container-second">
-    <div class="container-full" id="container-full">
-        <div class="container-fluid" id="container-fluid">
-            <div class="row component-holder login-text" id="component-holder">
-                <div id="responsive-component" class="col-md-9 col-lg-7 col-sm-10  col-xs-11">
-                    <div class="">
-
-                        <h1 class="title component-holder text-left h1" xattr-position="text-left" xattr-type="h1"
-                            data-component="crn-text-component">Bem vindo ao CRONAPP
-                        </h1>
-
-                        <p data-component="crn-simple-text" class="component-holder">O Cronapp revolucionou a
-                            maneira de desenvolver softwares para que você seja livre para
-                            criar e implementar soluções rapidamente no ritmo da transformação do seu negócio.</p>
-
+    <div id="container-second">
+        <div class="container-full" id="container-full">
+            <div class="container-fluid" id="container-fluid">
+                <div class="row component-holder login-text" id="component-holder">
+                    <div id="responsive-component" class="col-md-9 col-lg-7 col-sm-10  col-xs-11">
+                        <div>
+                            <h1 class="title component-holder text-left h1" xattr-position="text-left" xattr-type="h1"
+                                data-component="crn-text-component">{{'WelcomeToCRONAPP' | translate}}</h1>
+                            <p data-component="crn-simple-text" class="component-holder">
+                                {{'WelcomeToCRONAPP-description' | translate}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <div class="modal fade" id="forgotPasswordModal">
