@@ -216,7 +216,7 @@
       "runtimeClass": "cronos.widgets.joint.uml.Class",
       "size": {
         "height": 107.8666763305664,
-        "width": 123.00000762939453
+        "width": 124.00001525878906
       },
       "tableName": "APPLICATION",
       "tableScheme": null,
@@ -401,7 +401,7 @@
       "runtimeClass": "cronos.widgets.joint.uml.Class",
       "size": {
         "height": 118.67057037353516,
-        "width": 175
+        "width": 177
       },
       "tableName": "APPLICATION_USER",
       "tableScheme": null,
@@ -842,7 +842,7 @@
       "runtimeClass": "cronos.widgets.joint.uml.Class",
       "size": {
         "height": 228.16786193847656,
-        "width": 235.953125
+        "width": 236.95314025878906
       },
       "tableName": "AUDIT_LOG",
       "type": "uml.Class",
@@ -1115,7 +1115,7 @@
       "runtimeClass": "cronos.widgets.joint.uml.Class",
       "size": {
         "height": 162.1171875,
-        "width": 161.5625
+        "width": 162.56251525878906
       },
       "tableName": "DEVICE",
       "tableScheme": null,
@@ -1392,7 +1392,7 @@
       ],
       "size": {
         "height": 140.4170379638672,
-        "width": 192.234375
+        "width": 193.234375
       },
       "tableName": "LOGIN",
       "type": "uml.Class",
@@ -1731,7 +1731,7 @@
       ],
       "size": {
         "height": 151.28694915771484,
-        "width": 214.00001525878906
+        "width": 215.00001525878906
       },
       "tableName": "ROLE",
       "type": "uml.Class",
@@ -1943,7 +1943,7 @@
       ],
       "size": {
         "height": 118.69715118408203,
-        "width": 164
+        "width": 166
       },
       "tableName": "ROLE_SECURABLE",
       "type": "uml.Class",
@@ -2178,7 +2178,7 @@
       ],
       "size": {
         "height": 118.67058563232422,
-        "width": 169
+        "width": 170
       },
       "tableName": "SECURABLE",
       "type": "uml.Class",
@@ -2204,7 +2204,7 @@
         "twoFactorEnabled:java.lang.Boolean",
         "userName:java.lang.String",
         "theme:java.lang.String",
-        "picture:java.lang.String"
+        "picture:Image Upload (to Database)"
       ],
       "attrs": {
         ".uml-class-attrs-rect": {
@@ -2219,7 +2219,7 @@
           "fill": "#666",
           "font-family": "\u0027Fira Sans\u0027, sans-serif",
           "font-size": 11,
-          "text": "id:Texto\naccessFailedCount:Inteiro\nemail:Texto\nemailConfirmed:Lógico\nlockoutEnabled:Lógico\nlockoutEnd:Data e Hora\nname:Texto\nnormalizedEmail:Texto\nnormalizedUserName:Texto\npassword:Texto\nphoneNumber:Texto\nphoneNumberConfirmed:Lógico\nsecurityStamp:Texto\ntwoFactorEnabled:Lógico\nuserName:Texto\ntheme:Texto\npicture:Texto"
+          "text": "id:Texto\naccessFailedCount:Inteiro\nemail:Texto\nemailConfirmed:Lógico\nlockoutEnabled:Lógico\nlockoutEnd:Data e Hora\nname:Texto\nnormalizedEmail:Texto\nnormalizedUserName:Texto\npassword:Texto\nphoneNumber:Texto\nphoneNumberConfirmed:Lógico\nsecurityStamp:Texto\ntwoFactorEnabled:Lógico\nuserName:Texto\ntheme:Texto\npicture:Imagem no Banco"
         },
         ".uml-class-attrs-value": {
           "fill": "#0066FF",
@@ -2827,7 +2827,7 @@
         },
         {
           "name": "picture",
-          "type": "java.lang.String",
+          "type": "Image Upload (to Database)",
           "dbName": "picture",
           "dbLength": 255,
           "dbPrecision": "",
@@ -2948,7 +2948,7 @@
       ],
       "size": {
         "height": 272.00555419921875,
-        "width": 236.75833129882812
+        "width": 239.75833129882812
       },
       "tableName": "USER",
       "type": "uml.Class",
@@ -3160,7 +3160,7 @@
       ],
       "size": {
         "height": 118.69715118408203,
-        "width": 118.01564025878906
+        "width": 120.01564025878906
       },
       "tableName": "USER_ROLE",
       "type": "uml.Class",
@@ -3372,7 +3372,7 @@
       ],
       "size": {
         "height": 118.69715118408203,
-        "width": 164
+        "width": 166
       },
       "tableName": "USER_SECURABLE",
       "type": "uml.Class",
@@ -3845,7 +3845,7 @@
       "runtimeClass": "cronos.widgets.joint.uml.Class",
       "size": {
         "height": 216.91427612304688,
-        "width": 238
+        "width": 240.00001525878906
       },
       "tableName": "VIEW",
       "tableScheme": null,
@@ -4463,27 +4463,13 @@
         "dcc00b32-aa33-47bd-bc4d-91da88f25cbc",
         "4cbe47fe-4f4b-43e9-960b-4b5cc2633aef",
         "53b97115-f8a3-4221-9ce6-bad2672b8bd5",
+        "b194a533-61d6-4661-b9da-ff80ce2835f9",
+        "d92238a3-a37d-4cc6-a543-d0687dc207cd",
         "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
         "e35a650f-29ee-4683-8c1c-5cc61a955ddf",
-        "fabe0aea-c05d-44a4-a87c-2e2c0a97e994",
-        "b194a533-61d6-4661-b9da-ff80ce2835f9",
-        "d92238a3-a37d-4cc6-a543-d0687dc207cd"
+        "fabe0aea-c05d-44a4-a87c-2e2c0a97e994"
       ],
       "groupPositions": [
-        {
-          "idCell": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
-          "position": {
-            "x": 924,
-            "y": 278
-          }
-        },
-        {
-          "idCell": "fabe0aea-c05d-44a4-a87c-2e2c0a97e994",
-          "position": {
-            "x": 547,
-            "y": 60
-          }
-        },
         {
           "idCell": "36b875ac-204a-4346-82e4-aabbd2c6b202",
           "position": {
@@ -4496,6 +4482,41 @@
           "position": {
             "x": 92,
             "y": 600
+          }
+        },
+        {
+          "idCell": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
+          "position": {
+            "x": 924,
+            "y": 278
+          }
+        },
+        {
+          "idCell": "53b97115-f8a3-4221-9ce6-bad2672b8bd5",
+          "position": {
+            "x": 380,
+            "y": 649
+          }
+        },
+        {
+          "idCell": "fabe0aea-c05d-44a4-a87c-2e2c0a97e994",
+          "position": {
+            "x": 547,
+            "y": 60
+          }
+        },
+        {
+          "idCell": "dcc00b32-aa33-47bd-bc4d-91da88f25cbc",
+          "position": {
+            "x": 622,
+            "y": 338
+          }
+        },
+        {
+          "idCell": "d92238a3-a37d-4cc6-a543-d0687dc207cd",
+          "position": {
+            "x": 50,
+            "y": 33
           }
         },
         {
@@ -4513,10 +4534,10 @@
           }
         },
         {
-          "idCell": "dcc00b32-aa33-47bd-bc4d-91da88f25cbc",
+          "idCell": "b194a533-61d6-4661-b9da-ff80ce2835f9",
           "position": {
-            "x": 622,
-            "y": 338
+            "x": 261,
+            "y": 0
           }
         },
         {
@@ -4530,13 +4551,6 @@
           "idCell": "56d9e678-741d-41e6-9b24-bccc58de1598",
           "position": {
             "x": 1178,
-            "y": 649
-          }
-        },
-        {
-          "idCell": "53b97115-f8a3-4221-9ce6-bad2672b8bd5",
-          "position": {
-            "x": 380,
             "y": 649
           }
         }
