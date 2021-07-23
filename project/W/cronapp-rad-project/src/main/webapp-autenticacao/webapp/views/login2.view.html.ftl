@@ -176,7 +176,7 @@
                         </div>
                     </div>
                 </form>
-            </div>
+                
             <div class="modal-footer">
                 <div class="modalPassword">
                     <div class="component-holder ng-scope  col-md-2" data-component="crn-button" id="crn-button-save">
