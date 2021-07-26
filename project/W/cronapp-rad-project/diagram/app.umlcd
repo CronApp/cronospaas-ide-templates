@@ -2042,7 +2042,7 @@
         "twoFactorEnabled:java.lang.Boolean",
         "userName:java.lang.String",
         "theme:java.lang.String",
-        "picture:java.lang.String"
+        "picture:Image Upload (to Database)"
       ],
       "attrs": {
         ".uml-class-attrs-rect": {
@@ -2055,8 +2055,8 @@
         },
         ".uml-class-attrs-value": {
           "font-size": 11,
-          "ref-x": 153,
-          "text": "Texto\nInteiro\nTexto\nLógico\nLógico\nData e Hora\nTexto\nTexto\nTexto\nTexto\nTexto\nLógico\nTexto\nLógico\nTexto\nTexto\nTexto\n"
+          "ref-x": 154.453125,
+          "text": "Texto\nInteiro\nTexto\nLógico\nLógico\nData e Hora\nTexto\nTexto\nTexto\nTexto\nTexto\nLógico\nTexto\nLógico\nTexto\nTexto\nImagem no Banco\n"
         },
         ".uml-class-methods-rect": {
           "height": 30,
@@ -2180,7 +2180,8 @@
           "storageId": "",
           "storageKey": "",
           "storageType": "",
-          "storageSecret": ""
+          "storageSecret": "",
+          "foreignKeyName": ""
         },
         {
           "name": "accessFailedCount",
@@ -2210,7 +2211,8 @@
           "storageId": "",
           "storageKey": "",
           "storageType": "",
-          "storageSecret": ""
+          "storageSecret": "",
+          "foreignKeyName": ""
         },
         {
           "name": "email",
@@ -2240,7 +2242,8 @@
           "storageId": "",
           "storageKey": "",
           "storageType": "",
-          "storageSecret": ""
+          "storageSecret": "",
+          "foreignKeyName": ""
         },
         {
           "name": "emailConfirmed",
@@ -2270,7 +2273,8 @@
           "storageId": "",
           "storageKey": "",
           "storageType": "",
-          "storageSecret": ""
+          "storageSecret": "",
+          "foreignKeyName": ""
         },
         {
           "name": "lockoutEnabled",
@@ -2300,7 +2304,8 @@
           "storageId": "",
           "storageKey": "",
           "storageType": "",
-          "storageSecret": ""
+          "storageSecret": "",
+          "foreignKeyName": ""
         },
         {
           "name": "lockoutEnd",
@@ -2330,7 +2335,8 @@
           "storageId": "",
           "storageKey": "",
           "storageType": "",
-          "storageSecret": ""
+          "storageSecret": "",
+          "foreignKeyName": ""
         },
         {
           "name": "name",
@@ -2360,7 +2366,8 @@
           "storageId": "",
           "storageKey": "",
           "storageType": "",
-          "storageSecret": ""
+          "storageSecret": "",
+          "foreignKeyName": ""
         },
         {
           "name": "normalizedEmail",
@@ -2390,7 +2397,8 @@
           "storageId": "",
           "storageKey": "",
           "storageType": "",
-          "storageSecret": ""
+          "storageSecret": "",
+          "foreignKeyName": ""
         },
         {
           "name": "normalizedUserName",
@@ -2420,7 +2428,8 @@
           "storageId": "",
           "storageKey": "",
           "storageType": "",
-          "storageSecret": ""
+          "storageSecret": "",
+          "foreignKeyName": ""
         },
         {
           "name": "password",
@@ -2450,7 +2459,8 @@
           "storageId": "",
           "storageKey": "",
           "storageType": "",
-          "storageSecret": ""
+          "storageSecret": "",
+          "foreignKeyName": ""
         },
         {
           "name": "phoneNumber",
@@ -2480,7 +2490,8 @@
           "storageId": "",
           "storageKey": "",
           "storageType": "",
-          "storageSecret": ""
+          "storageSecret": "",
+          "foreignKeyName": ""
         },
         {
           "name": "phoneNumberConfirmed",
@@ -2510,7 +2521,8 @@
           "storageId": "",
           "storageKey": "",
           "storageType": "",
-          "storageSecret": ""
+          "storageSecret": "",
+          "foreignKeyName": ""
         },
         {
           "name": "securityStamp",
@@ -2540,7 +2552,8 @@
           "storageId": "",
           "storageKey": "",
           "storageType": "",
-          "storageSecret": ""
+          "storageSecret": "",
+          "foreignKeyName": ""
         },
         {
           "name": "twoFactorEnabled",
@@ -2570,7 +2583,8 @@
           "storageId": "",
           "storageKey": "",
           "storageType": "",
-          "storageSecret": ""
+          "storageSecret": "",
+          "foreignKeyName": ""
         },
         {
           "name": "userName",
@@ -2600,7 +2614,8 @@
           "storageId": "",
           "storageKey": "",
           "storageType": "",
-          "storageSecret": ""
+          "storageSecret": "",
+          "foreignKeyName": ""
         },
         {
           "name": "theme",
@@ -2630,11 +2645,12 @@
           "storageId": "",
           "storageKey": "",
           "storageType": "",
-          "storageSecret": ""
+          "storageSecret": "",
+          "foreignKeyName": ""
         },
         {
           "name": "picture",
-          "type": "java.lang.String",
+          "type": "Image Upload (to Database)",
           "dbName": "picture",
           "dbLength": 255,
           "dbPrecision": "",
@@ -2660,7 +2676,8 @@
           "storageId": "",
           "storageKey": "",
           "storageType": "",
-          "storageSecret": ""
+          "storageSecret": "",
+          "foreignKeyName": ""
         }
       ],
       "id": "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
@@ -2753,8 +2770,8 @@
         ""
       ],
       "size": {
-        "height": 271.75555419921875,
-        "width": 230
+        "height": 271.78211975097656,
+        "width": 260.734375
       },
       "tableName": "USER",
       "type": "uml.Class",
@@ -4226,11 +4243,11 @@
         "4cbe47fe-4f4b-43e9-960b-4b5cc2633aef",
         "53b97115-f8a3-4221-9ce6-bad2672b8bd5",
         "55beab5c-2393-4e53-879f-87138492feb1",
+        "b194a533-61d6-4661-b9da-ff80ce2835f9",
+        "d92238a3-a37d-4cc6-a543-d0687dc207cd",
         "fbe4a477-8332-4235-a9a2-5db4a56fa3d0",
         "a9daca3f-9ddd-41ad-9961-200b89f35561",
-        "e35a650f-29ee-4683-8c1c-5cc61a955ddf",
-        "b194a533-61d6-4661-b9da-ff80ce2835f9",
-        "d92238a3-a37d-4cc6-a543-d0687dc207cd"
+        "e35a650f-29ee-4683-8c1c-5cc61a955ddf"
       ]
     }
   ]
