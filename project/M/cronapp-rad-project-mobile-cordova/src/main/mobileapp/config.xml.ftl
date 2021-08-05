@@ -16,7 +16,6 @@
     <splash src="res/screen.png" />
     <platform name="android">
         <preference name="OverrideUserAgent" value="Mozilla/5.0 Google" />
-        <preference name="android-minSdkVersion" value="22" />
         <allow-intent href="market:*" />
         <#-- VERIFY IF THE VARIABLES CONTAINING THE LIST OF ICONS AND SPLASH SCREEN ARE DEFINED (mobilesizes.json) -->
         <#if androidIconList?has_content>
