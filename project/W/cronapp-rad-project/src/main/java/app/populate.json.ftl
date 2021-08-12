@@ -934,5 +934,43 @@
       "id": "${appguid}"
     },
     "_class": "app.entity.View"
+  },
+  {
+    "id": "${statics["java.util.UUID"].randomUUID()}",
+    "securable": {
+      "id": "${publicSecurable}"
+    },
+    "pattern": "/api/metadata/**",
+    "getMethodAllowed": true,
+    "headMethodAllowed": true,
+    "putMethodAllowed": false,
+    "postMethodAllowed": false,
+    "patchMethodAllowed": false,
+    "deleteMethodAllowed": false,
+    "optionsMethodAllowed": false,
+    "traceMethodAllowed": false,
+    "application": {
+      "id": "${appguid}"
+    },
+    "_class": "app.entity.View"
+  },
+  {
+    "id": "${statics["java.util.UUID"].randomUUID()}",
+    "securable": {
+      "id": "${publicSecurable}"
+    },
+    "pattern": "/v3/**",
+    "getMethodAllowed": true,
+    "headMethodAllowed": true,
+    "putMethodAllowed": false,
+    "postMethodAllowed": false,
+    "patchMethodAllowed": false,
+    "deleteMethodAllowed": false,
+    "optionsMethodAllowed": false,
+    "traceMethodAllowed": false,
+    "application": {
+      "id": "${appguid}"
+    },
+    "_class": "app.entity.View"
   }
 ]
