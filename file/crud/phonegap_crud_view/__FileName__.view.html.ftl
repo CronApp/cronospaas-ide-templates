@@ -76,7 +76,7 @@
   </#if>
 
         <div crn-datasource="${model.dataSourceName}" class="" ng-hide="${model.dataSourceName}.editing || ${model.dataSourceName}.inserting">
-            <cron-list ng-model="vars.cronlist${model.dataSourceName}" id="ion-list-main" options="${model.getMobileAdvancedList(model.dataSourceName, model.dataSourceName, field)}" class="component-holder ng-binding ng-scope" data-component="crn-ion-list">
+            <cron-list ng-model="vars.cronlist${model.dataSourceName}" id="ion-list-main" options="${model.getMobileAdvancedList(model.dataSourceName, model.dataSourceName, field)}" class="component-holder ng-binding ng-scope" data-component="crn-ion-list" id="crn-ion-list-${model.random}">
             </cron-list>
         </div>
         <div ng-show="${model.dataSourceName}.editing || ${model.dataSourceName}.inserting">
