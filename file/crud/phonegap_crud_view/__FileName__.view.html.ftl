@@ -75,14 +75,9 @@
       </#if>
   </#if>
 
-        <div crn-datasource="${model.dataSourceName}" class=""
-             ng-hide="${model.dataSourceName}.editing || ${model.dataSourceName}.inserting">
-            <div class="component-holder ng-binding ng-scope" data-component="crn-ion-list" id="crn-ion-list-main">
-                <cron-list ng-model="vars.cronlist${model.dataSourceName}" id="ion-list-main"
-                           options="${model.getMobileAdvancedList(model.dataSourceName, model.dataSourceName, field)}"
-                           class="" style="">
-                </cron-list>
-            </div>
+        <div crn-datasource="${model.dataSourceName}" class="" ng-hide="${model.dataSourceName}.editing || ${model.dataSourceName}.inserting">
+            <cron-list ng-model="vars.cronlist${model.dataSourceName}" id="ion-list-main" options="${model.getMobileAdvancedList(model.dataSourceName, model.dataSourceName, field)}" class="component-holder ng-binding ng-scope" data-component="crn-ion-list">
+            </cron-list>
         </div>
         <div ng-show="${model.dataSourceName}.editing || ${model.dataSourceName}.inserting">
             <form crn-datasource="${model.dataSourceName}">
