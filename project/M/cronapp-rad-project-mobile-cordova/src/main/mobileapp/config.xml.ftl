@@ -4,7 +4,6 @@
     <description>${appname}</description>
     <author email="${useremail}" href="http://cronapp.io">${username}</author>
     <content src="index.html" />
-    <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
