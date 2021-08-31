@@ -23,7 +23,7 @@
                     <img alt="{{'Home.view.Home' | translate}}" src="node_modules/cronapp-framework-js/dist/img/logo.svg" style="width:101px; margin-top:-4px" id="crn-navbar-logo" data-component="crn-image">
                 </a>
 
-                <#if!(menuPosition??)||menuPosition=="Vertical">
+                <#if !(menuPosition??) || menuPosition == "Vertical">
                     <div>
                         <a href="" class="nav-button buttons-password " title="{{'Home.view.ChangePassword' | translate}}" alt="{{'Home.view.ChangePassword' | translate}}" ng-click="cronapi.screen.showModal('modalPassword')" data-component="crn-anchor">
                             <div data-component="crn-icon" class="component-holder" id="crn-icon-password">
@@ -39,20 +39,30 @@
                     </div>
                 </#if>
             </div>
+
+            <#if menuPosition == 'Vertical'>
+                <div id="navbar-profile">
+                    <img class="user-avatar nav-user-image" alt="Icon user"
+                        ng-src="{{ session.user.picture || 'node_modules/cronapp-framework-js/dist/img/img-user.svg'}}"
+                        data-component="crn-image-menu" id="crn-image-menu">
+                    <span>{{session.user.name}}</span>
+                </div>
+            </#if>
+            
             <div id="navbar" class="navbar-collapse collapse float-left-desktop">
                 <ul class="nav navbar-nav" style="float:none">
-                    <#if(customMenu??)>
-                        <#listcustomMenu?keysaskey>
-                            <#assignitems=customMenu[key]>
+                    <#if (customMenu??)>
+                        <#list customMenu ? keys as key>
+                            <#assign items = customMenu[key]>
                                 <li class="dropdown component-holder" data-component="crn-menu-item">
                                     <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="${key}">
                                         <i class=""></i>
                                         <span>${key}</span>
                                         <span class="caret"></span>
                                     </a>
-                                    <#if(items??)>
+                                    <#if (items??)>
                                         <ul class="dropdown-menu">
-                                            <#listitemsasitem>
+                                            <#list items as item>
                                                 <li>
                                                     <a href="#/home/logged/${item.name?lower_case}" class="component-holder" data-component="crn-anchor">${item.realName}</a>
                                                 </li>
@@ -70,7 +80,7 @@
                     </ul>
                 </div>
 
-                <#if!(menuPosition??)||menuPosition=="Horizontal">
+                <#if !(menuPosition??) || menuPosition=="Horizontal">
                     <div id="navbar-3" class="navbar-collapse collapse">
                         <div class="nav navbar-nav navbar-right" style="margin-right: 0;">
 
@@ -78,13 +88,8 @@
 
                                 <a href="" class="nav-button" role="button" title="{{'Home.view.Perfil' | translate}}" alt="{{'Home.view.Perfil' | translate}}" aria-haspopup="true" aria-expanded="false">
 
-                                    <#if!(session.user.picture??)>
-                                        <img class="user-avatar nav-user-image" alt="Icon user" src="{{ session.user.picture || 'node_modules/cronapp-framework-js/dist/img/img-user.svg'}}" data-component="crn-image-menu" id="crn-image-menu">
-                                    <#else>
-                                        <div data-component="crn-icon" class="component-holder" id="crn-icon-367103">
-                                            <i class="fa fa-user"></i>
-                                        </div>
-                                    </#if>
+                                        <img class="user-avatar nav-user-image" alt="Icon user" ng-src="{{ session.user.picture || 'node_modules/cronapp-framework-js/dist/img/img-user.svg'}}" data-component="crn-image-menu" id="crn-image-menu">
+                                  
                                     <span>{{"Home.view.Perfil" | translate}}</span>
                                 </a>
 
