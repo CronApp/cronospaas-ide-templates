@@ -43,7 +43,7 @@
             <#if menuPosition == 'Vertical'>
                 <div id="navbar-profile">
                     <img class="user-avatar nav-user-image" alt="Icon user"
-                        src="{{ session.user.picture || 'node_modules/cronapp-framework-js/dist/img/img-user.svg'}}"
+                        ng-src="{{ session.user.picture || 'node_modules/cronapp-framework-js/dist/img/img-user.svg'}}"
                         data-component="crn-image-menu" id="crn-image-menu">
                     <span>{{session.user.name}}</span>
                 </div>
@@ -88,7 +88,7 @@
 
                                 <a href="" class="nav-button" role="button" title="{{'Home.view.Perfil' | translate}}" alt="{{'Home.view.Perfil' | translate}}" aria-haspopup="true" aria-expanded="false">
 
-                                        <img class="user-avatar nav-user-image" alt="Icon user" src="{{ session.user.picture || 'node_modules/cronapp-framework-js/dist/img/img-user.svg'}}" data-component="crn-image-menu" id="crn-image-menu">
+                                        <img class="user-avatar nav-user-image" alt="Icon user" ng-src="{{ session.user.picture || 'node_modules/cronapp-framework-js/dist/img/img-user.svg'}}" data-component="crn-image-menu" id="crn-image-menu">
                                   
                                     <span>{{"Home.view.Perfil" | translate}}</span>
                                 </a>
