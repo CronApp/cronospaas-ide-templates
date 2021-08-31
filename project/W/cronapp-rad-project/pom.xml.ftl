@@ -217,6 +217,12 @@
             <groupId>io.cronapp</groupId>
             <artifactId>cronapp-framework-java</artifactId>
             <version>2.6.0-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.code.gson</groupId>
+                    <artifactId>gson</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>io.cronapp</groupId>
