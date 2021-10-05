@@ -177,5 +177,7 @@
   "ResetPasswordConfirmation-placeholder": "Confirme sua senha",
   "ResetPasswordNew-placeholder": "Digite sua senha nova" ,
   "WelcomeToCRONAPP": "Bem vindo ao CRONAPP",
-  "WelcomeToCRONAPP-description": "O Cronapp revolucionou a maneira de desenvolver softwares para que você seja livre para criar e implementar soluções rapidamente no ritmo da transformação do seu negócio."
+  "WelcomeToCRONAPP-description": "O Cronapp revolucionou a maneira de desenvolver softwares para que você seja livre para criar e implementar soluções rapidamente no ritmo da transformação do seu negócio.",
+  "noDataFound": "Nenhum dado encontrado",
+  "requiredField": "Campo obrigatório"
 }
