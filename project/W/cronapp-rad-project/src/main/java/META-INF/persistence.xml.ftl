@@ -3,18 +3,22 @@
     <persistence-unit name="app" transaction-type="RESOURCE_LOCAL">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <jta-data-source>java:comp/env/jdbc/main</jta-data-source>
+        <class>app.entity.AuditLog</class>
+        <class>app.entity.Device</class>
+    <#if (authentication??) >
+        <#if (authentication?lower_case) != "nenhuma">
         <class>app.entity.RoleSecurable</class>
         <class>app.entity.Securable</class>
         <class>app.entity.UserSecurable</class>
         <class>app.entity.UserRole</class>
         <class>app.entity.User</class>
-        <class>app.entity.Device</class>
         <class>app.entity.Role</class>
-        <class>app.entity.AuditLog</class>
         <class>app.entity.Login</class>
         <class>app.entity.View</class>
         <class>app.entity.Application</class>
         <class>app.entity.ApplicationUser</class>
+        </#if>
+    </#if>
     <#if database??>
       <#assign databaseConfig = database?split("|")>
         <properties>

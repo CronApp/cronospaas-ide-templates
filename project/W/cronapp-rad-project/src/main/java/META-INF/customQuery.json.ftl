@@ -232,6 +232,107 @@
     "serviceUrl": "api/cronapi/odata/v2/app/auditlogquery/",
     "audit": false
   },
+  "device": {
+    "customId": "device",
+    "queryName": "Atualizar Dispositivos",
+    "screen": "",
+    "sourceType": "entityFullName",
+    "blockly": null,
+    "entitySimpleName": "Device",
+    "entityFullName": "app.entity.Device",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "Device",
+          "namespace": "app.entity.Device",
+          "alias": "d"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "d",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "d.id",
+            "field": "d.id",
+            "type": "string",
+            "input": "text",
+            "operator": "equal",
+            "value": ":id",
+            "valueIsField": false
+          }
+        ],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": true,
+      "paginatorAutomatic": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "id",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": false,
+      "GETAuthorities": null,
+      "POST": false,
+      "POSTAuthorities": null,
+      "PUT": false,
+      "PUTAuthorities": null,
+      "DELETE": false,
+      "DELETEAuthorities": null,
+      "FILTER": false,
+      "FILTERAuthorities": null,
+      "COUNT": false,
+      "COUNTAuthorities": null
+    },
+    "events": {
+      "beforeInsert": null,
+      "beforeUpdate": null,
+      "beforeDelete": null,
+      "afterInsert": null,
+      "afterUpdate": null,
+      "afterDelete": null,
+      "onNavigate": null,
+      "onGetData": null
+    },
+    "defaultValues": {
+      "id": null,
+      "token": null
+    },
+    "security": {
+      "id": null,
+      "token": null
+    },
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "errorHandles": {
+      "primaryKey": null,
+      "foreignKey": null
+    },
+    "serviceUrl": "api/cronapi/query/1jy88nt41afza/"
+  }
+</#noparse>
+<#if (authentication??) >
+  <#if (authentication?lower_case) != "nenhuma">
+  ,
+<#noparse>
   "userSecurables": {
     "customId": "userSecurables",
     "queryName": "Obter Autorizações do Usuário",
@@ -1104,102 +1205,6 @@
     },
     "serviceUrl": "api/cronapi/odata/v2/app/roles/",
     "audit": false
-  },
-  "device": {
-    "customId": "device",
-    "queryName": "Atualizar Dispositivos",
-    "screen": "",
-    "sourceType": "entityFullName",
-    "blockly": null,
-    "entitySimpleName": "Device",
-    "entityFullName": "app.entity.Device",
-    "query": {
-      "isValid": true,
-      "isEmpty": false,
-      "operationType": "object",
-      "type": "select",
-      "rulesEntity": [
-        {
-          "entity": "Device",
-          "namespace": "app.entity.Device",
-          "alias": "d"
-        }
-      ],
-      "rulesSelect": [
-        {
-          "func": "get",
-          "field": "d",
-          "type": "string"
-        }
-      ],
-      "rulesGroupBy": [],
-      "rulesHaving": [],
-      "rulesOrderBy": [],
-      "rules": {
-        "condition": "AND",
-        "rules": [
-          {
-            "id": "d.id",
-            "field": "d.id",
-            "type": "string",
-            "input": "text",
-            "operator": "equal",
-            "value": ":id",
-            "valueIsField": false
-          }
-        ],
-        "not": false,
-        "valid": true
-      },
-      "isRawSql": false,
-      "multiTenant": true,
-      "paginatorAutomatic": false
-    },
-    "queryParamsValues": [
-      {
-        "fieldName": "id",
-        "fieldValue": ""
-      }
-    ],
-    "verbs": {
-      "GET": false,
-      "GETAuthorities": null,
-      "POST": false,
-      "POSTAuthorities": null,
-      "PUT": false,
-      "PUTAuthorities": null,
-      "DELETE": false,
-      "DELETEAuthorities": null,
-      "FILTER": false,
-      "FILTERAuthorities": null,
-      "COUNT": false,
-      "COUNTAuthorities": null
-    },
-    "events": {
-      "beforeInsert": null,
-      "beforeUpdate": null,
-      "beforeDelete": null,
-      "afterInsert": null,
-      "afterUpdate": null,
-      "afterDelete": null,
-      "onNavigate": null,
-      "onGetData": null
-    },
-    "defaultValues": {
-      "id": null,
-      "token": null
-    },
-    "security": {
-      "id": null,
-      "token": null
-    },
-    "calcFields": {},
-    "calcFieldsSecurity": {},
-    "errorHandles": {
-      "primaryKey": null,
-      "foreignKey": null
-    },
-    "serviceUrl": "api/cronapi/query/1jy88nt41afza/"
   },
   "roleManager": {
     "customId": "roleManager",
@@ -2181,5 +2186,7 @@
     "serviceUrl": "api/cronapi/odata/v2/app/roleSecurableManager/",
     "audit": true
   }
-</#noparse>  
+</#noparse>
+  </#if>
+</#if>
 }
