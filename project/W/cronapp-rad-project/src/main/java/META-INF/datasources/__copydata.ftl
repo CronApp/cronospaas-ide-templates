@@ -1,7 +1,9 @@
-file=appUserManager.datasource.json
 file=auditlogquery.datasource.json
-file=auth.datasource.json
 file=device.datasource.json
+<#if (authentication??) >
+    <#if (authentication?lower_case) != "nenhuma">
+file=appUserManager.datasource.json
+file=auth.datasource.json
 <#if mutual?? && mutual?lower_case == "sim">
 keyManager.datasource.json
 </#if>
@@ -16,3 +18,5 @@ file=userManager.datasource.json
 file=userRoleManager.datasource.json
 file=userSecurableManager.datasource.json
 file=userSecurables.datasource.json
+    </#if>
+</#if>

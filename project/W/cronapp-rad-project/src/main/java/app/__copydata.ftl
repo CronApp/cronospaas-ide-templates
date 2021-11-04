@@ -2,6 +2,8 @@
 <#if (authentication??) >
 	<#if (authentication?lower_case) == "nenhuma">
 file=AppConfiguration.java.ftl
+path=/entity
+path=/dao
 	<#else>
 path=/business
 path=/dao
