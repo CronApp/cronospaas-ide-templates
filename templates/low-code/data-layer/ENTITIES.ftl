@@ -36,6 +36,9 @@ import javax.xml.bind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import cronapi.rest.security.CronappSecurity;
+<#if clazz.rest>
+import cronapi.swagger.CronappSwagger;
+</#if>
 <#if clazz.hasRowVersion() || clazz.hasXML()>
 import org.eclipse.persistence.annotations.Convert;
 import org.eclipse.persistence.annotations.Converter;
@@ -91,6 +94,9 @@ import org.eclipse.persistence.annotations.*;
 @XmlRootElement
 <#if clazz.rest>
 @CronappSecurity<#if restSecurityDescription??>(${restSecurityDescription})</#if>
+</#if>
+<#if clazz.swagger>
+@CronappSwagger
 </#if>
 <#if (clazz.multitenantClass)>
 @Multitenant(MultitenantType.SINGLE_TABLE)
