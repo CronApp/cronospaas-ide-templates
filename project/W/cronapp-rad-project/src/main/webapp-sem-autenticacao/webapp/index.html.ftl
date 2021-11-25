@@ -77,5 +77,7 @@
   <!-- Custom Controllers -->
   <script src="js/custom.controllers.js"></script>
   <script src="node_modules/cronapp-framework-js/dist/js/upload.service.js"></script>
+  <script src="node_modules/cronapp-lib-js/dist/js/kendo-ui/js/kendo.all.fixed.js"></script>
+  <script src="node_modules/cronapp-lib-js/dist/js/kendo-ui/js/timezones/kendo.timezones.min.js"></script> 
 </body>
 </html>
