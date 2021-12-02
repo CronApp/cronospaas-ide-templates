@@ -49,7 +49,7 @@ public static Var BeforeDelete(Var param_Entidade) throws Exception {
                                     cronapi.i18n.Operations.translate(Var.valueOf("OnlyOneAdministrator"))));
                 }
             }
-            return Entidade;
+            return param_Entidade;
         }
     }.call();
 }
