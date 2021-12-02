@@ -14,6 +14,10 @@ import org.eclipse.persistence.annotations.Converter;
 <#if clazz.hasRowVersion()>
 import cronapi.database.VersionConverter;
 </#if>
+<#if clazz.hasUseOuterJoin()>
+import org.eclipse.persistence.annotations.JoinFetch;
+import org.eclipse.persistence.annotations.JoinFetchType;
+</#if>
 <#if clazz.hasXML()>
 import cronapi.database.ByteConverter;
 </#if>
@@ -204,6 +208,9 @@ public class ${clazz.name} implements Serializable {
                 </#if>
     @Column(name = "${field.dbFieldName}", nullable = ${field.nullable?c}<#if !field.primaryKey>, unique = ${field.unique?c}</#if><#if field.length??>, length=${field.length?c}</#if><#if field.precision??>, precision=${field.precision?c}</#if><#if field.scale??>, scale=${field.scale?c}</#if>, insertable=${field.insertable?c}, updatable=${field.updatable?c}<#if field.columnDefinition??>, columnDefinition = "${field.columnDefinition}"</#if>)
             </#if>
+        </#if>
+        <#if field.getUseOuterJoin()>
+    @JoinFetch(JoinFetchType.OUTER)
         </#if>
         <#if (field.ignore)>
     @JsonIgnore
