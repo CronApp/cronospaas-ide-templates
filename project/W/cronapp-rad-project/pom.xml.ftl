@@ -25,6 +25,15 @@
                 </excludes>
             </resource>
             <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**</include>
+                </includes>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
                 <targetPath>META-INF</targetPath>
                 <directory>config</directory>
                 <includes>
@@ -33,22 +42,6 @@
             </resource>
         </resources>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.6</version>
-                <configuration>
-                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
-                    <packagingExcludes>WEB-INF/**/*.java</packagingExcludes>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                    <webResources>
-                        <resource>
-                            <directory>config</directory>
-                            <targetPath>META-INF</targetPath>
-                        </resource>
-                    </webResources>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -98,39 +91,41 @@
                 </executions>
             </plugin>
 </#if>
+            <plugin>
+                <groupId>io.cronapp</groupId>
+                <artifactId>cronapp-compile-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+            </plugin>
         </plugins>
     </build>
     <dependencies>
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>1.4.200</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>compile</scope>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <scope>compile</scope>
-            <exclusions>
-                <exclusion>
-                    <artifactId>hibernate-entitymanager</artifactId>
-                    <groupId>org.hibernate</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -148,26 +143,10 @@
         <dependency>
             <groupId>io.cronapp</groupId>
             <artifactId>cronapi-java</artifactId>
-            <exclusions>
-                <exclusion>
-                    <artifactId>commons-lang3</artifactId>
-                    <groupId>org.apache.commons</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>junit</artifactId>
-                    <groupId>junit</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>io.cronapp</groupId>
             <artifactId>cronapp-framework-java</artifactId>
-	    <exclusions>
-                <exclusion>
-                  <groupId>com.google.code.gson</groupId>
-                    <artifactId>gson</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>io.cronapp</groupId>
@@ -176,8 +155,6 @@
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-dbcp</artifactId>
-            <version>${r"${tomcat.version}"}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>io.cronapp</groupId>
@@ -197,6 +174,11 @@
         <dependency>
             <groupId>org.junit.vintage</groupId>
             <artifactId>junit-vintage-engine</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
