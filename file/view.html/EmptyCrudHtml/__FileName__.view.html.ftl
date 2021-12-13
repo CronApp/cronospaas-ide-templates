@@ -44,12 +44,12 @@
       </div>
     </div>
     <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
-      <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_post_${RANDOM}">
+      <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_post_${model.random}">
         <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.post()" aria-label="{{'SaveChanges' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
           <i class="glyphicon glyphicon-ok color-white" icon-theme="color-white"></i>
         </button>
       </div>
-      <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_cancel_${RANDOM}">
+      <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_cancel_${model.random}">
         <button class="btn k-button btn-block btn-danger btn-fab" ng-click="datasource.cancel()" aria-label="{{'CancelChanges' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled="">
           <i class="glyphicon  glyphicon-ban-circle color-white" icon-theme="color-white"></i>
         </button>
