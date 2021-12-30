@@ -10,7 +10,7 @@
             <a class="openconfigcookies" href="#" ng-click="cronapi.client('js.blockly.privacy.Cookies.openPreferences').names().run()">
                 {{'Privacy.view.Cookies.Dialog.OpenPreferences' | translate}}
             </a>
-            <button class="btn btn-success btn-sm acceptcookies" ng-click="cronapi.client('js.blockly.privacy.Cookies.setCookiesPreference').names().run()" xattr-fullsize="btn-block" xattr-theme="btn-success" xattr-disabled="">
+            <button class="btn btn-success btn-sm acceptcookies" ng-click="cronapi.client('js.blockly.privacy.Cookies.setPreference').names().run()" xattr-fullsize="btn-block" xattr-theme="btn-success" xattr-disabled="">
                 <i class="glyphicon glyphicon-ok"></i>
                 <span>{{'Privacy.view.Cookies.Accept' | translate}}</span>
             </button>
