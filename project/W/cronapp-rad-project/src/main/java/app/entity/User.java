@@ -86,7 +86,7 @@ public class User implements Serializable {
     /**
     * @generated
     */
-    @Column(name = "normalized_email", nullable = false, unique = false, length=255, insertable=true, updatable=true)
+    @Column(name = "normalized_email", nullable = false, unique = true, length=255, insertable=true, updatable=true)
         
         private java.lang.String normalizedEmail = "";
 

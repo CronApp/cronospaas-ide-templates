@@ -2557,7 +2557,7 @@
           "label": "{{\u0027NormalizedEmail\u0027 | translate}}",
           "mask": "",
           "isPrimaryKey": false,
-          "isUniqueKey": false,
+          "isUniqueKey": true,
           "isNullable": false,
           "pkType": "",
           "multitenantContext": "",
