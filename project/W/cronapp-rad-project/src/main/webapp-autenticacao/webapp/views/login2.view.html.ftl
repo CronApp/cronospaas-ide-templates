@@ -41,7 +41,7 @@
                                     </div>
 
                             </#if>
-                            
+
 
                             <a ng-click="cronapi.screen.showModal('forgotPasswordModal')"
                                 class="reset-password cron-link text-right component-holder col-xs-12  col-md-12" target="_self" data-replace="true" data-component="crn-anchor" id="crn-botao-cadastre">{{'ResetPassword' | translate}}
@@ -56,16 +56,16 @@
                                 <#else>
                                     <div class="component-holder ng-scope" data-component="crn-button"
                                         id="crn-button-login">
-                                        <button role="button" aria-label="{{'Login.view.Login' | translate}}" class="btn k-button btn-login btn-block" type="submit" ng-disabled="form.$invalid || vm.dataLoading" ng-click="" xattr-size="" xattr-fullsize="btn-block" xattr-theme="" xattr-disabled="" data-component="crn-button"><span>{{"Login.view.Login" | translate}} </span>
+                                        <button role="button" aria-label="{{'Login.view.Login' | translate}}" class="btn k-button btn-login btn-block" type="submit" ng-disabled="form.$invalid || vm.dataLoading" ng-click="" xattr-size="" xattr-fullsize="btn-block" xattr-theme="" xattr-disabled="" data-component="crn-button"><i class="" icon-theme="color-white"></i><span>{{"Login.view.Login" | translate}} </span>
                                         </button>
                                     </div>
                             </#if>
-                    
+
 
                             <#if mutual?? && mutual?lower_case=="sim" && (enterprise)!false>
                                 <div class="component-holder ng-scope" data-component="crn-button" style="margin-top:5px"
                                     id="crn-button-mutual">
-                                    <button aria-label="{{'Login.view.Login' | translate}}" class="btn k-button btn-login-mutual btn-block" type="submit" ng-disabled="form.$invalid || vm.dataLoading" ng-click="cronapi.client('js.blockly.MutualAuth.login').run()" xattr-size="" xattr-fullsize="btn-block" xattr-theme="" xattr-disabled="" data-component="crn-button"><span>{{"CertificateLogin" |  translate}} </span>
+                                    <button aria-label="{{'Login.view.Login' | translate}}" class="btn k-button btn-login-mutual btn-block" type="submit" ng-disabled="form.$invalid || vm.dataLoading" ng-click="cronapi.client('js.blockly.MutualAuth.login').run()" xattr-size="" xattr-fullsize="btn-block" xattr-theme="" xattr-disabled="" data-component="crn-button"><i class="" icon-theme="color-white"></i><span>{{"CertificateLogin" |  translate}} </span>
                                     </button>
                                 </div>
                             </#if>
@@ -176,7 +176,7 @@
                         </div>
                     </div>
                 </form>
-                
+
             <div class="modal-footer">
                 <div class="modalPassword">
                     <div class="component-holder ng-scope  col-md-2" data-component="crn-button" id="crn-button-save">

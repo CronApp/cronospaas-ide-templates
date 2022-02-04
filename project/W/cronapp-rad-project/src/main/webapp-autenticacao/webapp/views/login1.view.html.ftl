@@ -55,7 +55,7 @@
                                     <#else>
                                         <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-login">
                                             <button role="button" aria-label="{{'Login.view.Login' | translate}}" class="btn k-button btn-login btn-block" type="submit"
-                                                ng-disabled="form.$invalid || vm.dataLoading" ng-click="" xattr-size="" xattr-fullsize="btn-block" xattr-theme="" xattr-disabled="" data-component="crn-button"><span>{{"Login.view.Login" | translate}}
+                                                ng-disabled="form.$invalid || vm.dataLoading" ng-click="" xattr-size="" xattr-fullsize="btn-block" xattr-theme="" xattr-disabled="" data-component="crn-button"><i class="" icon-theme="color-white"></i><span>{{"Login.view.Login" | translate}}
                                                 </span>
                                             </button>
                                         </div>
@@ -65,7 +65,7 @@
 
                                 <#if mutual?? && mutual?lower_case=="sim" && (enterprise)!false>
                                     <div class="component-holder ng-scope" data-component="crn-button" style="margin-top:5px" id="crn-button-mutual">
-                                        <button aria-label="{{'Login.view.Login' | translate}}" class="btn k-button btn-login-mutual btn-block" type="submit" ng-disabled="form.$invalid || vm.dataLoading" ng-click="cronapi.client('js.blockly.MutualAuth.login').run()" xattr-size="" xattr-fullsize="btn-block" xattr-theme="" xattr-disabled="" data-component="crn-button"><span>{{"CertificateLogin" | translate}} </span>
+                                        <button aria-label="{{'Login.view.Login' | translate}}" class="btn k-button btn-login-mutual btn-block" type="submit" ng-disabled="form.$invalid || vm.dataLoading" ng-click="cronapi.client('js.blockly.MutualAuth.login').run()" xattr-size="" xattr-fullsize="btn-block" xattr-theme="" xattr-disabled="" data-component="crn-button"><i class="" icon-theme="color-white"></i><span>{{"CertificateLogin" | translate}} </span>
                                         </button>
                                     </div>
                                 </#if>

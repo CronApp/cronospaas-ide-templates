@@ -74,7 +74,7 @@
                                     class="btn btn-default col-md-12 col-xs-12 k-button btn-primary" type="submit"
                                     ng-disabled="form.$invalid || vm.dataLoading" ng-click="" xattr-size=""
                                     xattr-fullsize="" xattr-theme="btn-default" xattr-disabled=""
-                                    data-component="crn-button"><span>{{"Login.view.Login" | translate}} </span>
+                                    data-component="crn-button"><i class="" icon-theme="color-white"></i><span>{{"Login.view.Login" | translate}} </span>
                                 </button>
                             </#if>
                             <a href="#/public/signup" class="sign-up cron-link component-holder col-md-12 col-xs-12"
