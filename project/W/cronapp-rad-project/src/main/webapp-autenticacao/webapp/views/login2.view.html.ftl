@@ -86,7 +86,9 @@
                                             <input type="hidden" name="csrf_token" value="CIwNZNlR4XbisJF39I8yWnWX9wX4WFoz" />
                                             <input type="hidden" name="scope" value="email,public_profile">
                                             <a title="Facebook" role="button" onclick="document.getElementById('facebook').submit()">
-                                                <i class="fa fa-2x fa-facebook"></i>
+                                                <div class="component-holder ng-scope" data-component="crn-icon" id="crn-icon-01">
+                                                    <i class="fa fa-2x fa-facebook"></i>
+                                                </div>
                                             </a>
                                         </form>
                                     </li>
@@ -95,7 +97,9 @@
                                             <input type="hidden" name="csrf_token" value="CIwNZNlR4XbisJF39I8yWnWX9wX4WFoz" />
                                             <input type="hidden" name="scope" value="email,public_profile">
                                             <a title="GitHub" role="button" onclick="document.getElementById('github').submit()">
-                                                <i class="fa fa-2x fa-github-alt"></i>
+                                                <div class="component-holder ng-scope" data-component="crn-icon" id="crn-icon-01">
+                                                    <i class="fa fa-2x fa-github-alt"></i>
+                                                </div>
                                             </a>
                                         </form>
                                     </li>
@@ -104,7 +108,9 @@
                                             <input type="hidden" name="csrf_token" value="CIwNZNlR4XbisJF39I8yWnWX9wX4WFoz" />
                                             <input type="hidden" name="scope" value="r_emailaddress">
                                             <a title="LinkedIn" role="button" onclick="document.getElementById('linkedin').submit()">
-                                                <i class="fa fa-2x fa-linkedin-square"></i>
+                                                <div class="component-holder ng-scope" data-component="crn-icon" id="crn-icon-01">
+                                                    <i class="fa fa-2x fa-linkedin-square"></i>
+                                                </div>
                                             </a>
                                         </form>
                                     </li>
@@ -113,7 +119,9 @@
                                             <input type="hidden" name="csrf_token" value="CIwNZNlR4XbisJF39I8yWnWX9wX4WFoz" />
                                             <input type="hidden" name="scope" value="email">
                                             <a title="Google" role="button" onclick="document.getElementById('google').submit()">
-                                                <i class="fa fa-2x fa-google"></i>
+                                                <div class="component-holder ng-scope" data-component="crn-icon" id="crn-icon-01">
+                                                    <i class="fa fa-2x fa-google"></i>
+                                                </div>
                                             </a>
                                         </form>
                                     </li>
@@ -122,7 +130,9 @@
                                             <input type="hidden" name="csrf_token" value="CIwNZNlR4XbisJF39I8yWnWX9wX4WFoz" />
                                             <input type="hidden" name="scope" value="email">
                                             <a title="CronApp" role="button" onclick="document.getElementById('cronapp').submit()">
-                                                <i class="fa fa-2x fa-cloud"></i>
+                                                <div class="component-holder ng-scope" data-component="crn-icon" id="crn-icon-01">
+                                                    <i class="fa fa-2x fa-cloud"></i>
+                                                </div>
                                             </a>
                                         </form>
                                     </li>
