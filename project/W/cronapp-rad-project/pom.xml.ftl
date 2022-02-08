@@ -181,6 +181,10 @@
             <artifactId>selenium-java</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>io.cronapp</groupId>
+            <artifactId>cronapp-framework-auditlog</artifactId>
+        </dependency>
     </dependencies>
     <repositories>
         <repository>

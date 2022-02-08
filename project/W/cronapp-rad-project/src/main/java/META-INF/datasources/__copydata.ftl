@@ -1,3 +1,4 @@
+file=auditlogcleanup.datasource.json
 file=auditlogquery.datasource.json
 file=device.datasource.json
 <#if (authentication??) >
