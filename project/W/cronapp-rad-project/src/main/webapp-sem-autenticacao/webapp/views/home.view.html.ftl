@@ -37,38 +37,3 @@
 <div ui-view="" id="main-view" tabindex="-1" role="main" class="container-fluid main-view <#if !(menuPosition??) || menuPosition == "Horizontal">main-view-horizontal<#else>main-view-vertical</#if>">
     <h1 class="component-holder text-left h3 title">{{'Home.view.Home' | translate}}</h1>
 </div>
-<div class="modal fade" id="modalPassword">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="{{'Home.view.Close' | translate}}"><span aria-hidden="true">×</span></button>
-                <h2 class="modal-title">{{"Home.view.ChangePassword" | translate}}</h2>
-            </div>
-            <div class="modal-body">
-                <form class="form-validation" autocomplete="off" name="form" role="form">
-                    <input type="hidden" name="csrf_token" value="CIwNZNlR4XbisJF39I8yWnWX9wX4WFoz" />
-                    <div class="text-danger wrapper text-center" ng-show="authError">
-                    </div>
-                    <div class="list-group list-group-sm">
-                        <div class="list-group-item">
-                            <label for="oldPassword">{{"Home.view.Old Password" | translate}}</label>
-                            <input type="password" class="form-control k-textbox" id="oldPassword" placeholder="{{'Home.view.Old Password' | translate}}" aria-label="{{'Home.view.Old Password' | translate}}" ng-required="true">
-                        </div>
-                        <div class="list-group-item">
-                            <label for="newPassword">{{"Home.view.New Password" | translate}}</label>
-                            <input type="password" class="form-control k-textbox" id="newPassword" placeholder="{{'Home.view.New Password' | translate}}" aria-label="{{'Home.view.New Password' | translate}}" ng-required="true">
-                        </div>
-                        <div class="list-group-item">
-                            <label for="newPasswordConfirmation">{{"Home.view.Confirmation" | translate}}</label>
-                            <input type="password" class="form-control k-textbox" id="newPasswordConfirmation" placeholder="{{'Home.view.Confirmation' | translate}}" aria-label="{{'Home.view.Confirmation' | translate}}" ng-required="true">
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary btn-fab k-button" type="submit" ng-click="changePassword()" ng-disabled="form.$invalid || vm.dataLoading" aria-label="{{'Save' | translate}}"><span class="k-icon k-i-check"></span></button>
-                <button class="btn btn-default btn-fab k-button" type="button" data-dismiss="modal" aria-label="{{'Home.view.Close' | translate}}"><span class="k-icon k-i-close"></span></button>
-            </div>
-        </div>
-    </div>
-</div>
