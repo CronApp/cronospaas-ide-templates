@@ -12,7 +12,7 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav" style="float:none">
-          <div class="component-holder ng-scope col-md-10" data-component="crn-dynamic-menu" id="crn-dynamic-menu">
+          <div class="component-holder ng-scope col-md-10" data-component="crn-dynamic-menu" id="crn-dynamic-menu-home">
             <cron-dynamic-menu options="{&quot;subMenuOptions&quot;:[{&quot;id&quot;:&quot;1iut7rlrhfnzs&quot;,&quot;name&quot;:&quot;Home&quot;,&quot;title&quot;:&quot;{{\&quot;Home.view.Home\&quot; | translate}}&quot;,&quot;action&quot;:&quot;cronapi.screen.changeView('#/public/home', [])&quot;,&quot;level&quot;:1,&quot;textPosition&quot;:&quot;left&quot;,&quot;imagePosition&quot;:&quot;left&quot;,&quot;contentTheme&quot;:&quot;light&quot;,&quot;iconTheme&quot;:&quot;light&quot;,&quot;menuItems&quot;:[]}]}" data-component="crn-dynamic-menu" class="component-holder" id="crn-dynamic-menu-226965"> Dynamic Menu
             </cron-dynamic-menu>
           </div>
