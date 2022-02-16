@@ -25,6 +25,8 @@
   <div id="modalTemplateContext" ng-include="'node_modules/cronapi-js/include/modal.view.html'"></div>
   <!-- Report -->
   <div id="reportViewContext" ng-include="'node_modules/cronapp-framework-js/components/reports/reports.view.html'"></div>
+  <!-- Dashboard --> 
+  <div id="dashboardViewContext" ng-include="'node_modules/cronapp-framework-js/components/dashboard/dashboard.view.html'"></div>
   <!-- Plugins -->
   <script src="plugins/jquery/dist/jquery.min.js"></script>
   <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
