@@ -19,7 +19,7 @@
         </div>
 
         <div class="item">
-          <a href="" class="component-holder" style="display:block" xattr-fullsize="display:block;" data-replace="true" data-component="crn-anchor" id="reset-password-login" on-hold="" on-tap="$evt('cronapi.screen.changeView(\'#/app/public/reset-password-email\', [])')">{{'ResetPassword' | translate}}</a>
+          <a href="#/app/public/reset-password" class="component-holder" style="display:block" xattr-fullsize="display:block;" data-replace="true" data-component="crn-anchor" id="reset-password-login" on-hold="" on-tap="">{{'ResetPassword' | translate}}</a>
         </div>
 
         <div class="item" title="{{'Login.view.Login' | translate}}" for="crn-button-445347">
