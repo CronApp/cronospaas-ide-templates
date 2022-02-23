@@ -16,9 +16,9 @@
         <link rel="stylesheet" href="plugins/angular-ui-notification/dist/angular-ui-notification.min.css" />
         <link rel="stylesheet" href="plugins/pace/pace.css">
         <#if !(theme??) ||  theme == "" >
-        <link id="themeSytleSheet" rel="stylesheet" href="">
+        <link id="themeStyleSheet" rel="stylesheet" href="">
         <#else >
-        <link id="themeSytleSheet" rel="stylesheet" href="css/themes/${theme?lower_case}.min.css">
+        <link id="themeStyleSheet" rel="stylesheet" href="css/themes/${theme?lower_case}.min.css">
         </#if>
     </head>
     <body >

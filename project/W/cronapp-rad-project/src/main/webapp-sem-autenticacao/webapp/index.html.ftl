@@ -11,9 +11,9 @@
   <link rel="stylesheet" href="plugins/cronapp-framework-js/dist/css/app.css" />
   <link rel="stylesheet" href="plugins/angular-ui-notification/dist/angular-ui-notification.min.css" />
   <#if !(theme??) || theme=="">
-  <link id="themeSytleSheet" rel="stylesheet" href="plugins/cronapp-framework-js/css/themes/material.min.css">
+  <link id="themeStyleSheet" rel="stylesheet" href="plugins/cronapp-framework-js/css/themes/material.min.css">
   <#else>
-  <link id="themeSytleSheet" rel="stylesheet" href="plugins/cronapp-framework-js/css/themes/${theme?lower_case}.min.css">
+  <link id="themeStyleSheet" rel="stylesheet" href="plugins/cronapp-framework-js/css/themes/${theme?lower_case}.min.css">
   </#if>
   <script src="js/customModules.js"></script>
   <link rel="stylesheet" href="css/app.css" />

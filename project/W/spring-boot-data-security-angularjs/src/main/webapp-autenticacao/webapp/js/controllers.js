@@ -83,7 +83,7 @@
         $rootScope.myTheme = $rootScope.session.user.theme;
         $scope.$watch('myTheme', function(value) {
           if (value !== undefined && value !== "") {
-            $('#themeSytleSheet').attr('href', "css/themes/"+value+".min.css");
+            $('#themeStyleSheet').attr('href', "css/themes/"+value+".min.css");
           }
         });
         if ($rootScope.session.token) $scope.refreshToken();
@@ -162,7 +162,7 @@
             'display':'block'
           });
           $('#transition').fadeIn(800, function(){
-            $('#themeSytleSheet').attr('href', "css/themes/"+theme+".min.css");
+            $('#themeStyleSheet').attr('href', "css/themes/"+theme+".min.css");
             $rootScope.myTheme = theme;
             $('#transition').fadeOut(1000,function(){$('#transition').remove();});  
           });
