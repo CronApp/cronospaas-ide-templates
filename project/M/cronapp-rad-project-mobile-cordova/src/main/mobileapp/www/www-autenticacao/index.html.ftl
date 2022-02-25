@@ -12,7 +12,11 @@
   <script src="js/customModules.js"></script>
   <script src="js/customStateProvider.js"></script>
   <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+  <#if !(theme??) ||  theme == "" >
   <link id="themeStyleSheet" rel="stylesheet" href="node_modules/cronapp-framework-mobile-js/css/themes/material.min.css">
+  <#else >
+  <link id="themeStyleSheet" rel="stylesheet" href="node_modules/cronapp-framework-mobile-js/css/themes/${theme?lower_case}.min.css">
+  </#if>
 </head>
 <body>
   <ion-nav-view role="main"></ion-nav-view>
