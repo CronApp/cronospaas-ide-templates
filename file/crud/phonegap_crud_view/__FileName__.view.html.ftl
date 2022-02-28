@@ -1,5 +1,5 @@
 <ion-view cache-view="false" hide-back-button="true" role="region">
-    <ion-header-bar role="heading" class="bar bar-header bar-positive" xattr-theme="bar-positive"
+    <ion-header-bar role="heading" class="bar bar-header bar-default" xattr-theme="bar-default"
                     data-component="crn-ion-header-bar">
         <div side="left" class="buttons buttons-left header-item">
             <button aria-labelledby="left_navicon_sr" class="button button-clear"
