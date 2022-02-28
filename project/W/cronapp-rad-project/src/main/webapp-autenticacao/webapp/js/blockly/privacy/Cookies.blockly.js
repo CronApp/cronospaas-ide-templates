@@ -41,6 +41,7 @@ window.blockly.js.blockly.privacy.Cookies.setPreference = async function() {
   this.cronapi.util.setCookie('cookieMarketing', isCheckedMarketingCookie, 'days', 365);
   this.cronapi.util.setCookie('cookieAnalytics', isCheckedAnalyticsCookie, 'days', 365);
   this.cronapi.util.setCookie('cookieEssencial', true, 'days', 365);
+  this.cronapi.screen.hideComponent("dialogCookies");
 }
 
 /**
