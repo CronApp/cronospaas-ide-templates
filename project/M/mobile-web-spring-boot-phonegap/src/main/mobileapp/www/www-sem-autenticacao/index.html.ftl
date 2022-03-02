@@ -9,7 +9,11 @@
 <!-- Customs -->
 <link href="lib/ionic/css/ionic.css" rel="stylesheet">
 <link href="css/app.css" rel="stylesheet">
+<#if !(theme??) ||  theme == "" >
 <link id="themeStyleSheet" rel="stylesheet" href="node_modules/cronapp-framework-mobile-js/css/themes/material.min.css">
+<#else >
+<link id="themeStyleSheet" rel="stylesheet" href="node_modules/cronapp-framework-mobile-js/css/themes/${theme?lower_case}.min.css">
+</#if>
 </head>
 <body ng-app="MyApp">
   <ion-nav-view></ion-nav-view>
