@@ -1,11 +1,3 @@
-<style title="local">
-    #crn-botao-cadastre {
-        margin-top: -4px;
-        margin-bottom: 20px;
-        color: rgb(138, 138, 138);
-    }
-</style>
-
 <div class="bg">
     <div class="container-full">
         <div class="container-fluid" id="container-fluid">
@@ -74,7 +66,7 @@
                                     class="btn btn-default col-md-12 col-xs-12 k-button btn-primary" type="submit"
                                     ng-disabled="form.$invalid || vm.dataLoading" ng-click="" xattr-size=""
                                     xattr-fullsize="" xattr-theme="btn-default" xattr-disabled=""
-                                    data-component="crn-button"><i class="" icon-theme="color-white"></i><span>{{"Login.view.Login" | translate}} </span>
+                                    data-component="crn-button"><i class="" icon-theme=""></i><span>{{"Login.view.Login" | translate}} </span>
                                 </button>
                             </#if>
                             <a href="#/public/signup" class="sign-up cron-link component-holder col-md-12 col-xs-12"
@@ -190,16 +182,16 @@
             </div>
             <div class="modal-footer">
                 <div class="modalPassword">
-                    <div class="component-holder ng-scope  col-md-2" data-component="crn-button" id="crn-button-save">
-                        <button class="btn k-button crnCSS-default btn-primary" type="submit"
+                    <div class="component-holder ng-scope col-md-2" data-component="crn-button" id="crn-button-save">
+                        <button class="btn k-button btn-primary" type="submit"
                             ng-click="cronapi.client('js.blockly.UserControl.resetPassword').names('7afdf898').run(forgotPasswordEmail.value)" xattr-fullsize=""
                             aria-label="{{'Save' | translate}}" xattr-theme="btn-primary" xattr-disabled="" ng-disabled="form.$invalid || vm.dataLoading">
                             <i class="glyphicon glyphicon-ok"></i>
                             <span>{{'Save' | translate}}</span>
                         </button>
                     </div>
-                    <div class="component-holder ng-scope  col-md-2" data-component="crn-button" id="crn-button-close">
-                        <button class="btn k-button crnCSS-default btn-danger" type="button" data-dismiss="modal"
+                    <div class="component-holder ng-scope col-md-2" data-component="crn-button" id="crn-button-close">
+                        <button class="btn k-button btn-danger" type="button" data-dismiss="modal"
                             xattr-fullsize="" aria-label="{{'Home.view.Close' | translate}}" xattr-theme="btn-danger"
                             xattr-disabled="">
                             <i class="glyphicon glyphicon-remove"></i>

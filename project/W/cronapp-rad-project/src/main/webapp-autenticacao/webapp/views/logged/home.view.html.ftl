@@ -85,8 +85,16 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary btn-fab k-button" type="submit" ng-click="changePassword()" ng-disabled="form.$invalid || vm.dataLoading" aria-label="{{'Save' | translate}}"><span class="k-icon k-i-check"></span></button>
-        <button class="btn btn-default btn-fab k-button" type="button" data-dismiss="modal" aria-label="{{'Home.view.Close' | translate}}"><span class="k-icon k-i-close"></span></button>
+        <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-save-${model.random}"> 
+          <button class="btn k-button btn-block btn-success btn-fab" ng-click="changePassword()" ng-disabled="form.$invalid || vm.dataLoading" aria-label="{{'Save' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-success" xattr-disabled="">
+            <i class="k-icon k-i-check" icon-theme=""></i>
+          </button> 
+        </div>
+        <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-cancel-${model.random}"> 
+          <button class="btn k-button btn-block btn-danger btn-fab" data-dismiss="modal" aria-label="{{'Home.view.Close' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled="">
+            <i class="k-icon k-i-close" icon-theme=""></i>
+          </button> 
+        </div>
       </div>
     </div>
   </div>

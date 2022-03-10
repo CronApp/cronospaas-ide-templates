@@ -156,45 +156,45 @@
 <div data-component="crn-form" id="crn-form-form-${model.dataSourceName}-${model.random}">
     <section class="form" ng-show="${model.dataSourceName}.editing || ${model.dataSourceName}.inserting">
         <form crn-datasource="${model.dataSourceName}" class="">
-                <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
-      <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-startInserting">
-        <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.startInserting()" aria-label="{{'StartInserting' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
-          <i class="glyphicon glyphicon-plus color-white" icon-theme="color-white"></i>
-        </button>
-      </div>
-      <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-startEditing">
-        <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.startEditing()" aria-label="{{'startEditing' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
-          <i class="glyphicon glyphicon-pencil color-white" icon-theme="color-white"></i>
-        </button>
-      </div>
-      <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-previous">
-        <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.previous()" ng-disabled="!datasource.hasPrevious()" aria-label="{{'Before' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
-          <i class="glyphicon glyphicon-chevron-left color-white" icon-theme="color-white"></i>
-        </button>
-      </div>
-      <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-next">
-        <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.next()" ng-disabled="!datasource.hasNext()" aria-label="{{'Next' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
-          <i class="glyphicon glyphicon-chevron-right color-white" icon-theme="color-white"></i>
-        </button>
-      </div>
-      <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-remove">
-        <button class="btn k-button btn-block btn-danger btn-fab" ng-click="datasource.remove()" aria-label="{{'Remove' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled="">
-          <i class="glyphicon glyphicon-remove color-white" icon-theme="color-white"></i>
-        </button>
-      </div>
-    </div>
-    <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
-      <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_post_${model.random}">
-        <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.post()" aria-label="{{'SaveChanges' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
-          <i class="glyphicon glyphicon-ok color-white" icon-theme="color-white"></i>
-        </button>
-      </div>
-      <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_cancel_${model.random}">
-        <button class="btn k-button btn-block btn-danger btn-fab" ng-click="datasource.cancel()" aria-label="{{'CancelChanges' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled="">
-          <i class="glyphicon  glyphicon-ban-circle color-white" icon-theme="color-white"></i>
-        </button>
-      </div>
-    </div>
+            <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
+                <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-startInserting">
+                    <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.startInserting()" aria-label="{{'StartInserting' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+                        <i class="glyphicon glyphicon-plus" icon-theme=""></i>
+                    </button>
+                </div>
+                <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-startEditing">
+                    <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.startEditing()" aria-label="{{'startEditing' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+                        <i class="glyphicon glyphicon-pencil" icon-theme=""></i>
+                    </button>
+                </div>
+                <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-previous">
+                    <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.previous()" ng-disabled="!datasource.hasPrevious()" aria-label="{{'Before' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+                        <i class="glyphicon glyphicon-chevron-left" icon-theme=""></i>
+                    </button>
+                </div>
+                <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-next">
+                    <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.next()" ng-disabled="!datasource.hasNext()" aria-label="{{'Next' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+                        <i class="glyphicon glyphicon-chevron-right" icon-theme=""></i>
+                    </button>
+                </div>
+                <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-remove">
+                    <button class="btn k-button btn-block btn-danger btn-fab" ng-click="datasource.remove()" aria-label="{{'Remove' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled="">
+                        <i class="glyphicon glyphicon-remove" icon-theme=""></i>
+                    </button>
+                </div>
+            </div>
+            <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
+                <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_post_${model.random}">
+                    <button class="btn k-button btn-block btn-success btn-fab" ng-click="datasource.post()" aria-label="{{'SaveChanges' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-success" xattr-disabled="">
+                        <i class="glyphicon glyphicon-ok" icon-theme=""></i>
+                    </button>
+                </div>
+                <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_cancel_${model.random}">
+                    <button class="btn k-button btn-block btn-danger btn-fab" ng-click="datasource.cancel()" aria-label="{{'CancelChanges' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled="">
+                        <i class="glyphicon glyphicon-ban-circle" icon-theme=""></i>
+                    </button>
+                </div>
+            </div>
             <br/>
             <div class="crn-fieldset" ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
                 <#list model.formFields as field>
@@ -505,8 +505,16 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-primary btn-fab ng-binding grid-save-button-modal k-button" data-component="crn-button" ng-click="${dataSourceName}.active.${model.getTextRelationField(field)}=${dataSourceCombo}.active.${textField}; ${dataSourceName}.post();" onclick="(!${dataSourceName}.missingRequiredField()?$('#${nomeModal}').modal('hide'):void(0))"><span class="k-icon k-i-check"></span></button>
-                                <button type="button" class="btn btn-default btn-fab ng-binding k-button" data-component="crn-button" data-dismiss="modal"><span class="k-icon k-i-cancel"></span></button>
+                                <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-grid-save-button-modal">
+                                    <button class="btn k-button btn-block btn-success grid-save-button-modal" ng-click="${dataSourceName}.active.${model.getTextRelationField(field)}=${dataSourceCombo}.active.${textField}; ${dataSourceName}.post();" onclick="(!${dataSourceName}.missingRequiredField()?$('#${nomeModal}').modal('hide'):void(0))" xattr-fullsize="btn-block" xattr-theme="btn-success" xattr-disabled="">
+                                        <i class="k-icon k-i-check" icon-theme=""></i>
+                                    </button>
+                                </div>
+                                <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-grid-cancel-button-modal">
+                                    <button class="btn k-button btn-block btn-danger" ng-click="${dataSourceName}.active.${model.getTextRelationField(field)}=${dataSourceCombo}.active.${textField}; ${dataSourceName}.post();" onclick="(!${dataSourceName}.missingRequiredField()?$('#${nomeModal}').modal('hide'):void(0))" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled="">
+                                        <i class="k-icon k-i-cancel" icon-theme=""></i>
+                                    </button>
+                                </div>
                             </div>
                         </form>
                     </div>
