@@ -147,12 +147,12 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-save-${model.random}"> 
+                        <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-save-logged-home"> 
                             <button class="btn k-button btn-block btn-success btn-fab" type="submit" ng-click="changePassword()" ng-disabled="form.$invalid || vm.dataLoading" aria-label="{{'Save' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-success" xattr-disabled="">
                                 <i class="k-icon k-i-check" icon-theme=""></i>
                             </button> 
                         </div>
-                        <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-cancel-${model.random}"> 
+                        <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-cancel-logged-home"> 
                             <button class="btn k-button btn-block btn-danger btn-fab" data-dismiss="modal" aria-label="{{'Home.view.Close' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled="" type="button" >
                                 <i class="k-icon k-i-close" icon-theme=""></i>
                             </button> 
