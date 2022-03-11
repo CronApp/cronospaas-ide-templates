@@ -5,16 +5,19 @@ window.blockly.js.blockly.privacy = window.blockly.js.blockly.privacy || {};
 window.blockly.js.blockly.privacy.Cookies = window.blockly.js.blockly.privacy.Cookies || {};
 
 /**
+ * @function openPreferences
+ *
  * Descreva esta função...
  */
 window.blockly.js.blockly.privacy.Cookies.openPreferencesArgs = [];
 window.blockly.js.blockly.privacy.Cookies.openPreferences = async function() {
  var value, isChecked;
   this.cronapi.screen.showModal("modalCookies");
-  this.cronapi.screen.hideComponent("dialogCookies");
 }
 
 /**
+ * @function checkCookieMarketing
+ *
  * Descreva esta função...
  */
 window.blockly.js.blockly.privacy.Cookies.checkCookieMarketingArgs = [];
@@ -30,6 +33,8 @@ window.blockly.js.blockly.privacy.Cookies.checkCookieMarketing = async function(
 }
 
 /**
+ * @function setPreference
+ *
  * Cookies
  */
 window.blockly.js.blockly.privacy.Cookies.setPreferenceArgs = [];
@@ -45,6 +50,8 @@ window.blockly.js.blockly.privacy.Cookies.setPreference = async function() {
 }
 
 /**
+ * @function hideShowDialog
+ *
  * Descreva esta função...
  */
 window.blockly.js.blockly.privacy.Cookies.hideShowDialogArgs = [];
@@ -60,6 +67,8 @@ window.blockly.js.blockly.privacy.Cookies.hideShowDialog = async function() {
 }
 
 /**
+ * @function checkCookieAnalytics
+ *
  * Descreva esta função...
  */
 window.blockly.js.blockly.privacy.Cookies.checkCookieAnalyticsArgs = [];
@@ -75,6 +84,8 @@ window.blockly.js.blockly.privacy.Cookies.checkCookieAnalytics = async function(
 }
 
 /**
+ * @function checkCookieEssencials
+ *
  * Descreva esta função...
  */
 window.blockly.js.blockly.privacy.Cookies.checkCookieEssencialsArgs = [];
