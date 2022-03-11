@@ -25,15 +25,11 @@
 
                             <form class="form-validation ng-pristine ng-valid ng-valid-required" autocomplete="off"
                                 name="form" ng-submit="signup()" role="form">
-
-
                                 <img alt="Login" src="node_modules/cronapp-framework-js/img/cronapp-logo-login.png"
                                     class="crn-image img-login component-holder" style="object-fit: contain"
                                     object-fit="object-fit: contain;"
                                     xattr-position="margin-left:auto; margin-right:auto;" data-component="crn-image"
                                     id="crn-image-login">
-
-
                                 <h1 class="title component-holder col-xs-12 col-md-12 h3 text-left"
                                     xattr-position="text-left" xattr-type="h3" data-component="crn-text-component"
                                     id="crn-text-component-login">{{'Signup.view.Signup' | translate}}</h1>
@@ -101,19 +97,10 @@
                                             autocapitalize="off">
                                     </div>
                                 </div>
-
-                                <div class="component-holder ng-scope" data-component="crn-button"
-                                    id="crn-button-signup">
-                                    <button role="button" aria-label="{{'Signup.view.Register' | translate}}"
-                                        class="btn k-button btn-login btn-block" type="submit"
-                                        ng-disabled="form.$invalid || vm.dataLoading"
-                                        ng-click="cronapi.client('js.blockly.UserControl.signUp').names('ec5dbe32', '62cce53e', 'd42229ad', 'a49023f3').run(signupUsername.value, signupEmail.value, signupPassword.value, signupConfirmPassword.value)"
-                                        xattr-size="" xattr-fullsize="" xattr-theme="" xattr-disabled=""
-                                        data-component="crn-button">
-                                        <span class="ng-binding">
-                                            {{'Signup.view.Register' | translate}}
-                                        </span>
-                                    </button>
+                                <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-signup"> 
+                                    <button class="btn k-button btn-block btn-default crn-button-signup-register" role="button" aria-label="{{'Signup.view.Register' | translate}}" type="submit" ng-disabled="form.$invalid || vm.dataLoading" ng-click="cronapi.client('js.blockly.UserControl.signUp').names('ec5dbe32', '62cce53e', 'd42229ad', 'a49023f3').run(signupUsername.value, signupEmail.value, signupPassword.value, signupConfirmPassword.value)" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+                                        <span class="" text-theme="">{{'Signup.view.Register' | translate}}</span>
+                                    </button> 
                                 </div>
                             </form>
                         </div>

@@ -16,45 +16,45 @@
 <div data-component="crn-form" id="crn-form-form"> 
   <section class="form" ng-show="MainDatasource.editing || MainDatasource.inserting">
     <form crn-datasource="MainDatasource" class=""> 
-          <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
-      <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-startInserting">
-        <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.startInserting()" aria-label="{{'StartInserting' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
-          <i class="glyphicon glyphicon-plus color-white" icon-theme="color-white"></i>
-        </button>
+        <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
+          <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-startInserting">
+            <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.startInserting()" aria-label="{{'StartInserting' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+              <i class="glyphicon glyphicon-plus" icon-theme=""></i>
+            </button>
+          </div>
+          <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-startEditing">
+            <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.startEditing()" aria-label="{{'startEditing' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+              <i class="glyphicon glyphicon-pencil" icon-theme=""></i>
+            </button>
+          </div>
+          <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-previous">
+            <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.previous()" ng-disabled="!datasource.hasPrevious()" aria-label="{{'Before' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+              <i class="glyphicon glyphicon-chevron-left" icon-theme=""></i>
+            </button>
+          </div>
+          <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-next">
+            <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.next()" ng-disabled="!datasource.hasNext()" aria-label="{{'Next' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+              <i class="glyphicon glyphicon-chevron-right" icon-theme=""></i>
+            </button>
+          </div>
+          <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-remove">
+            <button class="btn k-button btn-block btn-danger btn-fab" ng-click="datasource.remove()" aria-label="{{'Remove' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled="">
+              <i class="glyphicon glyphicon-remove" icon-theme=""></i>
+            </button>
+          </div>
+        </div>
+        <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
+          <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_post_${model.random}">
+            <button class="btn k-button btn-block btn-success btn-fab" ng-click="datasource.post()" aria-label="{{'SaveChanges' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-success" xattr-disabled="">
+              <i class="glyphicon glyphicon-ok" icon-theme=""></i>
+            </button>
+          </div>
+          <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_cancel_${model.random}">
+            <button class="btn k-button btn-block btn-danger btn-fab" ng-click="datasource.cancel()" aria-label="{{'CancelChanges' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled="">
+              <i class="glyphicon glyphicon-ban-circle" icon-theme=""></i>
+            </button>
+          </div>
       </div>
-      <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-startEditing">
-        <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.startEditing()" aria-label="{{'startEditing' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
-          <i class="glyphicon glyphicon-pencil color-white" icon-theme="color-white"></i>
-        </button>
-      </div>
-      <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-previous">
-        <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.previous()" ng-disabled="!datasource.hasPrevious()" aria-label="{{'Before' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
-          <i class="glyphicon glyphicon-chevron-left color-white" icon-theme="color-white"></i>
-        </button>
-      </div>
-      <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-next">
-        <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.next()" ng-disabled="!datasource.hasNext()" aria-label="{{'Next' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
-          <i class="glyphicon glyphicon-chevron-right color-white" icon-theme="color-white"></i>
-        </button>
-      </div>
-      <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-remove">
-        <button class="btn k-button btn-block btn-danger btn-fab" ng-click="datasource.remove()" aria-label="{{'Remove' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled="">
-          <i class="glyphicon glyphicon-remove color-white" icon-theme="color-white"></i>
-        </button>
-      </div>
-    </div>
-    <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
-      <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_post_${model.random}">
-        <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.post()" aria-label="{{'SaveChanges' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
-          <i class="glyphicon glyphicon-ok color-white" icon-theme="color-white"></i>
-        </button>
-      </div>
-      <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_cancel_${model.random}">
-        <button class="btn k-button btn-block btn-danger btn-fab" ng-click="datasource.cancel()" aria-label="{{'CancelChanges' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled="">
-          <i class="glyphicon  glyphicon-ban-circle color-white" icon-theme="color-white"></i>
-        </button>
-      </div>
-    </div>
       <br> 
       <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting"> 
         <div class="component-holder ng-binding ng-scope" data-component="crn-textinput" id="crn-textinput-98075">
@@ -65,6 +65,5 @@
         </div> 
       </fieldset> 
     </form>
-	  
   </section>
 </div>
