@@ -12,7 +12,6 @@
 
                             <img alt="Login" src="node_modules/cronapp-framework-js/img/cronapp-logo-login.png" class="crn-image img-login component-holder" style="object-fit: contain" object-fit="object-fit: contain;" xattr-position="margin-left:auto; margin-right:auto;" data-component="crn-image" id="crn-image-login">
 
-
                             <h1 class="title component-holder col-xs-12 col-md-12 h3 text-left" xattr-position="text-left" xattr-type="h3" data-component="crn-text-component" id="crn-text-component-login">{{'Signup.view.Acess' | translate}}</h1>
 
                             <div class="login-signup">
@@ -39,33 +38,30 @@
                                         <label for="input-login-password">{{'Login.view.Password' | translate}}</label>
                                         <input type="password" mask="" mask-placeholder="" ng-required="false" ng-model="password.value" class="form-control k-textbox" id="input-login-password" autocomplete="current-password" placeholder="">
                                     </div>
-
+                                </div>
                             </#if>
-
 
                             <a ng-click="cronapi.screen.showModal('forgotPasswordModal')"
                                 class="reset-password cron-link text-right component-holder col-xs-12  col-md-12" target="_self" data-replace="true" data-component="crn-anchor" id="crn-botao-cadastre">{{'ResetPassword' | translate}}
                             </a>
-
 
                             <#if (authentication?lower_case=="sso" || authentication?lower_case=="saml" ) && (enterprise)!false>
                                 <a role="button" aria-label="{{'Login.view.Login' | translate}}" href="#" class="btn k-button btn-login btn-block" id="crn-button-login-authentication" target="_self" data-replace="true" data-component="crn-anchor"
                                     ng-click="redirectToLogin()">
                                     <span>{{"Login.view.Login" | translate}} </span>
                                 </a>
-                                <#else>
-                                    <div class="component-holder ng-scope" data-component="crn-button"
-                                        id="crn-button-login">
-                                        <button role="button" aria-label="{{'Login.view.Login' | translate}}" class="btn k-button btn-login btn-block" type="submit" ng-disabled="form.$invalid || vm.dataLoading" ng-click="" xattr-size="" xattr-fullsize="btn-block" xattr-theme="" xattr-disabled="" data-component="crn-button"><i class="" icon-theme=""></i><span>{{"Login.view.Login" | translate}} </span>
-                                        </button>
-                                    </div>
+                            <#else>
+                                <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-login">
+                                    <button aria-label="{{'Login.view.Login' | translate}}" class="btn k-button btn-block btn-default" type="submit"  ng-disabled="form.$invalid || vm.dataLoading" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+                                        <span class="" text-theme="">{{"Login.view.Login" | translate}}</span>
+                                    </button>
+                                </div>
                             </#if>
 
-
                             <#if mutual?? && mutual?lower_case=="sim" && (enterprise)!false>
-                                <div class="component-holder ng-scope" data-component="crn-button" style="margin-top:5px"
-                                    id="crn-button-mutual">
-                                    <button aria-label="{{'Login.view.Login' | translate}}" class="btn k-button btn-login-mutual btn-block" type="submit" ng-disabled="form.$invalid || vm.dataLoading" ng-click="cronapi.client('js.blockly.MutualAuth.login').run()" xattr-size="" xattr-fullsize="btn-block" xattr-theme="" xattr-disabled="" data-component="crn-button"><i class="" icon-theme=""></i><span>{{"CertificateLogin" |  translate}} </span>
+                                <div class="component-holder ng-scope" data-component="crn-button" style="margin-top:5px" id="crn-button-mutual">
+                                    <button aria-label="{{'CertificateLogin' | translate}}" class="btn k-button btn-block btn-default" type="submit" ng-disabled="form.$invalid || vm.dataLoading" ng-click="cronapi.client('js.blockly.MutualAuth.login').run()" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+                                        <span class="" text-theme="">{{"CertificateLogin" | translate}}</span>
                                     </button>
                                 </div>
                             </#if>

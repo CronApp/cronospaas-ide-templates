@@ -16,11 +16,6 @@
                             </h1>
                         </div>
 
-                        <div class="col-xs-10 col-md-8 col-md-push-2 col-xs-push-1" data-container="true">
-                            <ul class="list-inline center-block text-center">
-                            </ul>
-                        </div>
-
                         <#if authentication?lower_case != "sso" && authentication?lower_case != "saml">
 
                             <div class="component-holder ng-binding ng-scope col-xs-12 col-md-12" data-component="crn-textinput" id="crn-textinput-loginusername">
@@ -47,40 +42,34 @@
                            data-replace="true" data-component="crn-anchor" id="crn-botao-cadastre">{{'ResetPassword' | translate}}
                         </a>
 
-                        <div class="component-holder ng-binding ng-scope col-xs-12 col-md-12"
-                             data-component="crn-enterprise-checkbox" id="crn-enterprise-checkbox-login">
-                        </div>
-
-                        <div class="component-holder ng-binding ng-scope col-md-12" data-component="crn-button">
-                            <div class="messages">
-                                <div ng-show="message.error" class="help-block" data-container="true">
-                                    {{message.error}}
-                                </div>
+                        <div class="messages">
+                            <div ng-show="message.error" class="help-block" data-container="true">
+                                {{message.error}}
                             </div>
-                            <#if (authentication?lower_case == "sso" || authentication?lower_case == "saml") && (enterprise)!false>
-                                <a role="button" aria-label="{{'Login.view.Login' | translate}}" href="#" class="btn btn-default cron-link col-md-12 col-xs-12 k-button btn-primary" target="_self" data-replace="true" data-component="crn-anchor" ng-click="redirectToLogin()">
-                                    <span>{{"Login.view.Login" | translate}} </span>
-                                </a>
-                            <#else>
-                                <button role="button" aria-label="{{'Login.view.Login' | translate}}"
-                                    class="btn btn-default col-md-12 col-xs-12 k-button btn-primary" type="submit"
-                                    ng-disabled="form.$invalid || vm.dataLoading" ng-click="" xattr-size=""
-                                    xattr-fullsize="" xattr-theme="btn-default" xattr-disabled=""
-                                    data-component="crn-button"><i class="" icon-theme=""></i><span>{{"Login.view.Login" | translate}} </span>
-                                </button>
-                            </#if>
-                            <a href="#/public/signup" class="sign-up cron-link component-holder col-md-12 col-xs-12"
-                               target="_self" data-replace="true" data-component="crn-anchor" id="crn-anchor-login-signup">
-                                {{'Signup.view.Signup' | translate}}
-                            </a>
                         </div>
+                        <#if (authentication?lower_case == "sso" || authentication?lower_case == "saml") && (enterprise)!false>
+                            <a role="button" aria-label="{{'Login.view.Login' | translate}}" href="#" class="btn btn-default cron-link col-md-12 col-xs-12 k-button btn-primary" target="_self" data-replace="true" data-component="crn-anchor" ng-click="redirectToLogin()">
+                                <span>{{"Login.view.Login" | translate}} </span>
+                            </a>
+                        <#else>
+                            <div class="component-holder ng-scope col-xs-12 col-md-12" data-component="crn-button" id="crn-button-login">
+                                <button aria-label="{{'Login.view.Login' | translate}}" class="btn k-button btn-block btn-default" type="submit"
+                                ng-disabled="form.$invalid || vm.dataLoading" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+                                    <span class="" text-theme="">{{"Login.view.Login" | translate}}</span>
+                                </button>
+                            </div>
+                        </#if>
+                        <a href="#/public/signup" class="sign-up cron-link component-holder col-md-12 col-xs-12"
+                            target="_self" data-replace="true" data-component="crn-anchor" id="crn-anchor-login-signup">
+                            {{'Signup.view.Signup' | translate}}
+                        </a>
 
                     </form>
 
                     <#if mutual?? && mutual?lower_case == "sim" && (enterprise)!false>
-                        <div class="component-holder ng-binding ng-scope col-xs-12 col-md-12" style="margin-top:5px" data-component="crn-button" id="crn-button-716293">
-                            <button class="btn btn-default k-button btn-block" ng-click="cronapi.client('js.blockly.MutualAuth.login').run()" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
-                                <span>{{'CertificateLogin' | translate}}</span>
+                        <div class="component-holder ng-scope col-xs-12 col-md-12" data-component="crn-button" id="crn-button-certificate-login" style="margin-top:5px">
+                            <button aria-label="{{'CertificateLogin' | translate}}" class="btn k-button btn-block btn-default" ng-click="cronapi.client('js.blockly.MutualAuth.login').run()" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+                                <span class="" text-theme="">{{"CertificateLogin" | translate}}</span>
                             </button>
                         </div>
                     </#if>
