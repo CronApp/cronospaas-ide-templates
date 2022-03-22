@@ -373,67 +373,6 @@
             </div>
         </form>
     </section>
-    <section class="form" ng-show="${model.dataSourceName}.editing || ${model.dataSourceName}.inserting">
-        <form>
-            <div>
-                <!-- OneToN -->
-                <#list model.formFieldsOneToN as field>
-                    <!--query filter 1toN -->
-                    <#assign filterSearch = "">
-                    <#assign entitySearch = "">
-                    <#if model.hasSearchableFilter() && !model.hasCronappFramework()>
-                        <#if model.getGridFilterSearchable()=="generalSearch">
-                            <#assign filterSearch = "?search={{search${field.getName()}}}">
-                            <#assign entitySearch = "/generalSearch">
-                        <#else>
-                            <#assign filter_index = 0>
-                            <#assign entitySearch = "/specificSearch">
-                            <#list field.getClazz().getFields() as scfield>
-                                <#if scfield.isSearchable()>
-                                    <#assign parameter_angular_date = "">
-                                    <#if scfield.isDate() >
-                                        <#assign parameter_angular_date = "| date:'dd/MM/yyyy'">
-                                    <#elseif scfield.isTime()>
-                                        <#assign parameter_angular_date = "| date:'HH:mm:ss'">
-                                    <#elseif scfield.isTimestamp() >
-                                        <#assign parameter_angular_date = "| date:'dd/MM/yyyy HH:mm:ss'">
-                                    </#if>
-                                    <#if filter_index == 0>
-                                        <#assign filterSearch += "?${scfield.name}={{${scfield.name}${field.getName()}${parameter_angular_date}}}">
-                                        <#assign filter_index++>
-                                    <#else>
-                                        <#assign filterSearch += "&${scfield.name}={{${scfield.name}${field.getName()}${parameter_angular_date}}}">
-                                    </#if>
-                                </#if>
-                            </#list>
-                        </#if>
-                    </#if>
-
-                    <!-- query filter 1toN end-->
-                    <datasource
-                            data-component="crn-datasource"
-                            filter="${filterSearch}"
-                            name="${field.getName()}Grid"
-                            entity="${model.namespace}.${field.getName()}"
-                            keys="${model.getDataSourcePrimaryKeys(field)}"
-                            dependent-lazy-post="${model.dataSourceName}"
-                            rows-per-page="100"
-                            parameters="${model.getParametersDataSource(field)}"
-                            schema="${model.getDSSchema(field.getName())}"
-                            lazy=true>
-                    </datasource>
-                    <!-- teste -->
-                    <h2 class="lead component-holder text-left" data-component="crn-subtitle"><#if field.getClazz()?? && field.getClazz().getRealName()?? && field.getClazz().getRealName()?has_content>${field.getClazz().getRealName()}<#else>${field.getName()}</#if> </h2>
-                    <div class="component-holder ng-binding ng-scope" data-component="crn-cron-grid" id="crn-grid-${field.getName()}Grid-${model.random}">
-                        <#assign classname = "${field.clazz.name}">
-                        <#assign dataSourceName = "${classname}Grid">
-                        <cron-grid options="${model.getGridOptions(classname, dataSourceName, field)}" ng-model="vars.${dataSourceName}${model.random}" class="" style=""></cron-grid>
-                    </div>
-                </#list>
-                <!-- OneToOne  end -->
-            </div>
-        </form>
-    </section>
 </div>
 
 <#if model.hasFieldGridNtoN()?? && model.hasFieldGridNtoN()>
