@@ -14,7 +14,7 @@ import org.eclipse.persistence.annotations.Converter;
 <#if clazz.hasRowVersion()>
 import cronapi.database.VersionConverter;
 </#if>
-<#if clazz.hasUseOuterJoin()>
+<#if clazz.hasUseOuterJoin()?? && clazz.hasUseOuterJoin()>
 import org.eclipse.persistence.annotations.JoinFetch;
 import org.eclipse.persistence.annotations.JoinFetchType;
 </#if>
