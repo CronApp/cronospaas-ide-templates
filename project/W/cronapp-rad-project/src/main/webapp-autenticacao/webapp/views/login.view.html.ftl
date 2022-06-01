@@ -49,6 +49,7 @@
                         </#if>
                     </div>
                 </form>
+                <div class="" data-container="true"></div>
                 <#if mutual?? && mutual?lower_case == "sim" && (enterprise)!false>
                 <div class="component-holder ng-binding ng-scope col-xs-12 col-md-12" style="margin-top:5px" data-component="crn-button" id="crn-button-716293"><button class="btn btn-default k-button btn-block" ng-click="cronapi.client('js.blockly.MutualAuth.login').run()" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""><span>{{'CertificateLogin' | translate}}</span></button></div>
                 </#if>
