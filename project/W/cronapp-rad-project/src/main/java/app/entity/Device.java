@@ -13,8 +13,8 @@ import cronapi.rest.security.CronappSecurity;
 * Classe que representa a tabela DEVICE
 * @generated
 */
-@Entity
-@Table(name = "\"DEVICE\"")
+@javax.persistence.Entity
+@javax.persistence.Table(name = "\"DEVICE\"")
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("app.entity.Device")

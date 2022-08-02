@@ -13,8 +13,8 @@ import cronapi.rest.security.CronappSecurity;
 * Classe que representa a tabela VIEW
 * @generated
 */
-@Entity
-@Table(name = "\"VIEW\"")
+@javax.persistence.Entity
+@javax.persistence.Table(name = "\"VIEW\"")
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("app.entity.View")
