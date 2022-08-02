@@ -13,8 +13,8 @@ import cronapi.rest.security.CronappSecurity;
 * Classe que representa a tabela ROLE
 * @generated
 */
-@Entity
-@Table(name = "\"ROLE\"")
+@javax.persistence.Entity
+@javax.persistence.Table(name = "\"ROLE\"")
 @XmlRootElement
 @CronappSecurity(post = "Administrators", get = "Administrators", delete = "Administrators", put = "Administrators")
 @JsonFilter("app.entity.Role")

@@ -14,8 +14,8 @@ import cronapi.rest.security.CronappSecurity;
 * Classe que representa a tabela USER
 * @generated
 */
-@Entity
-@Table(name = "\"USER\"")
+@javax.persistence.Entity
+@javax.persistence.Table(name = "\"USER\"")
 @XmlRootElement
 @CronappSecurity(post = "Administrators", get = "Administrators", delete = "Administrators", put = "Administrators")
 @JsonFilter("app.entity.User")
